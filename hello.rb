@@ -155,11 +155,42 @@ class Development < Devohack
 end
 
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 #object creation
 hi =Devohack.new
 hi = Development.new
 hi.staff
+
+
+#Overriding Inhertence of parent class
+
+class Devohack
+	def staff
+		puts 'There are 8 members in devohack'
+		puts 'sahil do the full stack work'
+		puts 'kissan do the kheti work'
+	end
+	def work
+		puts 'Being a software developer'
+		puts 'To make andriod programming'
+	end
+end
+
+class Development < Devohack
+	def staff
+			puts 'this is the work done here'
+			puts 'Everone do their work'
+	end
+end
+
+
+
+
+#object creation
+h1 =Devohack.new
+h2 = Development.new
+
+h2.work
 
 
