@@ -166,7 +166,7 @@ hi.staff
 #Overriding Inhertence of parent class
 
 class Devohack
-	def staff
+	def initialize()
 		puts 'There are 8 members in devohack'
 		puts 'sahil do the full stack work'
 		puts 'kissan do the kheti work'
@@ -178,7 +178,7 @@ class Devohack
 end
 
 class Development < Devohack
-	def staff
+	def initialize()
 			puts 'this is the work done here'
 			puts 'Everone do their work'
 	end
@@ -192,5 +192,69 @@ h1 =Devohack.new
 h2 = Development.new
 
 h2.work
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+#use of super method    as we can use super to define methods in sub class
+class Devohack
+	def staff a="sahil", b="kissan",c="sachin"
+		puts "#{c} in devohack"
+		puts " #{a} do the full stack work"
+		puts " #{b}  do the kheti work"
+	end
+	def work
+		puts 'Being a software developer'
+		puts 'To make andriod programming'
+	end
+end
+
+class Development < Devohack
+	def staff a, b, c
+			puts "The work done by them in Devohack is:"
+			super     #Pass all argument by default which is pre defined
+			super a  #passing only 1 argument and rest are pre defined
+			super a, b, c    # passing all argument by self
+			super()  #all argument are by default
+
+			
+	end
+end
+
+
+
+
+#object creation
+h1 =Devohack.new
+h2 = Development.new
+
+h2.staff "Satyam", "Ankit", "Sumit"
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# The working of constructor
+
+
+class Devohack
+	def initialize()
+		puts 'There are 8 members in devohack'
+		puts 'sahil do the full stack work'
+		puts 'kissan do the kheti work'
+	end
+	
+end
+
+
+
+
+
+#object creation
+Devohack.new
+
+
+
 
 
